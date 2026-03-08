@@ -64,7 +64,21 @@ export default function Hero() {
 
             <div className="relative z-10 max-w-5xl mx-auto px-4 md:px-8 text-center">
                 {/* Badge */}
-
+                <motion.div
+                    custom={0}
+                    variants={floatVariants}
+                    initial="initial"
+                    animate="animate"
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-8 text-xs font-semibold tracking-widest uppercase"
+                    style={{
+                        background: 'rgba(18,173,238,0.08)',
+                        border: '1px solid rgba(18,173,238,0.25)',
+                        color: '#3cc9fd',
+                    }}
+                >
+                    <span className="w-2 h-2 rounded-full bg-brand-400 animate-pulse" />
+                    Merhaba, Ben
+                </motion.div>
 
                 {/* Name */}
                 <motion.h1
