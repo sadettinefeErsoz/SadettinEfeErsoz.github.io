@@ -4,14 +4,15 @@ import { Briefcase, Eye, ExternalLink } from 'lucide-react';
 import { projects } from '../data/projects';
 import ProjectModal from './ProjectModal';
 
-// Bento grid layout: projects[0] big, projects[1] medium, 4 small
+// Bento grid layout: projects[0] big, projects[1] medium, 3 small, 2 half-width
 const BENTO_LAYOUTS = [
     { gridColumn: 'span 7', gridRow: 'span 2' },   // 0 large
     { gridColumn: 'span 5', gridRow: 'span 2' },   // 1 medium
     { gridColumn: 'span 4', gridRow: 'span 1' },   // 2 small
     { gridColumn: 'span 4', gridRow: 'span 1' },   // 3 small
     { gridColumn: 'span 4', gridRow: 'span 1' },   // 4 small
-    { gridColumn: 'span 12', gridRow: 'span 1' },  // 5 full-width
+    { gridColumn: 'span 6', gridRow: 'span 1' },   // 5 half-width
+    { gridColumn: 'span 6', gridRow: 'span 1' },   // 6 half-width
 ];
 
 function ProjectCard({ project, layout, index, onClick }) {
@@ -35,7 +36,7 @@ function ProjectCard({ project, layout, index, onClick }) {
     };
 
     const isLarge = index === 0;
-    const isFullWidth = index === 5;
+    const isFullWidth = false;
 
     return (
         <motion.div
@@ -163,7 +164,7 @@ export default function Projects() {
                             key={project.id}
                             style={{
                                 ...BENTO_LAYOUTS[index],
-                                minHeight: index === 0 ? '360px' : index === 1 ? '360px' : index === 5 ? '160px' : '180px',
+                                minHeight: index === 0 ? '360px' : index === 1 ? '360px' : (index === 5 || index === 6) ? '180px' : '180px',
                             }}
                         >
                             <ProjectCard

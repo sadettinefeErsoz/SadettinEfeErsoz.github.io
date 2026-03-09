@@ -42,7 +42,7 @@ export default function ProjectModal({ project, onClose }) {
                     </button>
 
                     {/* Image carousel */}
-                    <div className="relative h-64 md:h-80 overflow-hidden rounded-t-2xl">
+                    <div className="relative h-72 md:h-96 overflow-hidden rounded-t-2xl" style={{ background: '#060d1a' }}>
                         <AnimatePresence mode="wait">
                             <motion.img
                                 key={currentImg}
@@ -52,13 +52,13 @@ export default function ProjectModal({ project, onClose }) {
                                 animate={{ opacity: 1, x: 0 }}
                                 exit={{ opacity: 0, x: -30 }}
                                 transition={{ duration: 0.35 }}
-                                className="w-full h-full object-cover"
+                                className="w-full h-full object-contain"
                             />
                         </AnimatePresence>
 
                         {/* Gradient overlay */}
                         <div className="absolute inset-0"
-                            style={{ background: 'linear-gradient(to top, rgba(10,18,32,0.7) 0%, transparent 50%)' }} />
+                            style={{ background: 'linear-gradient(to top, rgba(10,18,32,0.6) 0%, transparent 40%)' }} />
 
                         {/* Navigation arrows */}
                         <button onClick={prevImg}
@@ -126,9 +126,9 @@ export default function ProjectModal({ project, onClose }) {
                         <div className="flex gap-2 overflow-x-auto pb-2 mb-6">
                             {project.images.map((img, i) => (
                                 <button key={i} onClick={() => setCurrentImg(i)}
-                                    className="flex-shrink-0 w-16 h-12 rounded-lg overflow-hidden transition-all"
-                                    style={{ border: i === currentImg ? `2px solid #12adee` : '2px solid transparent', opacity: i === currentImg ? 1 : 0.5 }}>
-                                    <img src={img} alt="" className="w-full h-full object-cover" />
+                                    className="flex-shrink-0 w-20 h-14 rounded-lg overflow-hidden transition-all"
+                                    style={{ border: i === currentImg ? `2px solid #12adee` : '2px solid transparent', opacity: i === currentImg ? 1 : 0.5, background: '#060d1a' }}>
+                                    <img src={img} alt="" className="w-full h-full object-contain" />
                                 </button>
                             ))}
                         </div>

@@ -56,7 +56,7 @@ export const projects = [
         borderColor: 'rgba(16, 185, 129, 0.4)',
         icon: '🧰', // Hırdavat konsepti için '🧰' (Alet Çantası) eklendi, alternatif olarak '📦' (Koli) kullanabilirsin.
     },
-{
+    {
         id: 4,
         title: 'Randevu ve Tanıtım Uygulaması',
         shortDesc: 'Kanada merkezli Canfam HairSalon için geliştirilmiş online randevu yönetimi ve tanıtım özelliklerini bir arada sunan modern platform.',
@@ -77,6 +77,25 @@ export const projects = [
     },
     {
         id: 5,
+        title: 'Kurumsal Tanıtım ve Vitrin Sitesi',
+        shortDesc: "Aker Teknik Hırdavat için geliştirilen; ürünleri, hizmetleri ve kurumsal kimliği modern bir dijital vitrin aracılığıyla potansiyel müşterilere sunan tanıtım platformu.",
+        longDesc: "Aker Teknik Hırdavat'ın kurumsal dijital varlığını güçlendirmek amacıyla tasarlanan bu tanıtım sitesi, işletmenin ürün yelpazesini, hizmetlerini ve referanslarını etkileyici bir arayüzle sunmaktadır. Potansiyel müşterilerin işletmeyi tanıyabileceği, iletişime geçebileceği ve marka güvenilirliğini hissedebileceği şekilde kurgulanmıştır. Hızlı yükleme süreleri ve mobil uyumlu tasarımıyla kurumsal kimliği dijital ortama aktaran modern bir platform altyapısı sunar.",
+        isCommercial: true,
+        technologies: ['React', 'Tailwind CSS', 'Vite'],
+        category: 'Front-end',
+        images: [
+            '/info/images-akertanitim/1.png',
+            '/info/images-akertanitim/2.png',
+            '/info/images-akertanitim/3.png',
+            '/info/images-akertanitim/4.png',
+        ],
+        liveUrl: '#',
+        color: 'from-orange-500/20 to-red-500/20',
+        borderColor: 'rgba(249, 115, 22, 0.4)',
+        icon: '🏪',
+    },
+    {
+        id: 6,
         title: 'Dijital Topluluk Yönetim Sistemi',
         shortDesc: 'Üniversite kampüslerinde kulüp, etkinlik ve üye yönetimini dijitalleştiren kapsamlı topluluk yönetim platformu.',
         longDesc: 'Kampüs topluluklarının ihtiyaçlarına yönelik geliştirilen bu platform; kulüp kayıt ve yönetimi, etkinlik planlama ve duyuru, üye takip, dijital bildirim sistemi ve yönetici paneli özelliklerini kapsamaktadır. Öğrenciler ve yöneticiler için farklı rol ve yetkilendirme seviyeleri sunarak kampüs hayatını daha düzenli ve erişilebilir kılar.',
@@ -95,7 +114,7 @@ export const projects = [
         icon: '🏛️',
     },
     {
-        id: 6,
+        id: 7,
         title: 'Bireysel Ders Programı Takip Sistemi',
         shortDesc: 'Öğrencilerin ders programlarını, ödevlerini ve sınav takvimlerini tek ekrandan yönetmelerine olanak sağlayan kişisel akademik takip uygulaması.',
         longDesc: 'Öğrencilerin akademik süreçlerini kolaylaştırmak için tasarlanan bu uygulama; haftalık ders programı görüntüleme, ödev ve sınav takvimleri, not yönetimi ve hatırlatıcı bildirimleri içerir. Kullanıcı dostu arayüzü ve kişiselleştirilebilir takvim yapısıyla öğrencilerin ders çalışma verimliliğini artırmayı hedefler.',

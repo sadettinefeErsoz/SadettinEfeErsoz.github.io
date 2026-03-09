@@ -1,24 +1,52 @@
 import { motion } from 'framer-motion';
-import { GraduationCap, Building2, Handshake, DollarSign, CheckCircle, FolderCheck, MapPin, Calendar, Award, User, BookOpen, Briefcase, FlaskConical } from 'lucide-react';
+import { GraduationCap, Handshake, CheckCircle, MapPin, Calendar, Briefcase, FlaskConical, Code2 } from 'lucide-react';
 
 const timelineItems = [
     {
         year: 'Mart 2026 - Günümüz',
         title: 'Arch of Sigma',
-        org: 'Stajyer',
+        org: 'Intern',
+        location: 'Ankara, Türkiye',
         icon: <Briefcase size={18} />,
         color: '#8b5cf6',
-        tags: ['Phyton', 'AutoCAD', 'Blender'],
+        tags: ['Python', 'AutoCAD', 'Blender'],
+    },
+    {
+        year: '2025',
+        title: 'Canfam HairSalon',
+        org: 'Product Developer',
+        location: 'Vancouver, Kanada',
+        icon: <Code2 size={18} />,
+        color: '#ec4899',
+        tags: [],
+    },
+    {
+        year: '2025',
+        title: 'Aker Teknik Hırdavat',
+        org: 'Product Developer',
+        location: 'Gaziantep, Türkiye',
+        icon: <Code2 size={18} />,
+        color: '#f97316',
+        tags: [],
+    },
+    {
+        year: '2024',
+        title: 'Edevat Market',
+        org: 'Product Developer',
+        location: 'Gaziantep, Türkiye',
+        icon: <Code2 size={18} />,
+        color: '#10b981',
+        tags: [],
     },
     {
         year: '2023 – Günümüz',
         title: 'Yazılım Mühendisliği',
         org: 'Ankara Üniversitesi',
+        location: 'Ankara, Türkiye',
         icon: <GraduationCap size={18} />,
         color: '#12adee',
         tags: [],
     },
-
 ];
 
 const stats = [
@@ -65,9 +93,13 @@ export default function About() {
                         {/* Profile card */}
                         <div className="glass-card rounded-2xl p-8 mb-8">
                             <div className="flex items-start gap-5 mb-6">
-                                <div className="w-20 h-20 rounded-2xl flex items-center justify-center text-3xl flex-shrink-0"
-                                    style={{ background: 'linear-gradient(135deg, rgba(18,173,238,0.2), rgba(139,92,246,0.2))', border: '1px solid rgba(18,173,238,0.2)' }}>
-                                    👨‍💻
+                                <div className="w-20 h-20 rounded-2xl flex-shrink-0 overflow-hidden"
+                                    style={{ border: '1px solid rgba(18,173,238,0.3)' }}>
+                                    <img
+                                        src="/info/images-photo/1760275649141.jpg"
+                                        alt="Sadettin Efe Ersöz"
+                                        className="w-full h-full object-cover object-top"
+                                    />
                                 </div>
                                 <div>
                                     <h3 className="text-xl font-bold text-white mb-1">Sadettin Efe Ersöz</h3>
@@ -124,7 +156,7 @@ export default function About() {
                                     {/* Icon dot */}
                                     <div className="absolute left-0 w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
                                         style={{
-                                            background: `rgba(${item.color === '#12adee' ? '18,173,238' : item.color === '#8b5cf6' ? '139,92,246' : '236,72,153'}, 0.15)`,
+                                            background: `${item.color}22`,
                                             border: `1px solid ${item.color}40`,
                                             color: item.color,
                                         }}>
@@ -138,9 +170,14 @@ export default function About() {
                                             </span>
                                         </div>
                                         <h4 className="font-bold text-white text-sm mb-0.5">{item.title}</h4>
-                                        <p className="text-brand-400 text-xs font-medium mb-2 flex items-center gap-1">
-                                            <MapPin size={10} /> {item.org}
-                                        </p>
+                                        <div className="flex flex-wrap items-center gap-2 mb-2">
+                                            <span className="text-xs font-semibold px-2 py-0.5 rounded-full" style={{ background: `${item.color}20`, color: item.color, border: `1px solid ${item.color}30` }}>{item.org}</span>
+                                            {item.location && (
+                                                <span className="text-gray-500 text-xs flex items-center gap-1">
+                                                    <MapPin size={10} /> {item.location}
+                                                </span>
+                                            )}
+                                        </div>
                                         <p className="text-gray-400 text-xs leading-relaxed mb-3">{item.desc}</p>
                                         <div className="flex flex-wrap gap-2">
                                             {item.tags.map((tag) => (
